@@ -28,6 +28,14 @@ defmodule TodoListWeb.TodoLive do
 
 
 
+
+
+
+
+
+
+
+
 use TodoListWeb, :live_view
 alias TodoList.Todos
   def mount(_params, _session, socket) do
@@ -45,6 +53,13 @@ alias TodoList.Todos
   def handle_event("toggle_done", %{"id" => id}, socket) do
     todo = Todos.get_todo!(id)
     Todos.update_todo(todo, %{done: !todo.done})
+    Todos.delete_todo(todo)
+    {:noreply, fetch(socket) |> put_flash(:info, "Task was completed!")}
+  end
+
+  def handle_event("deleted", %{"id" => id}, socket) do
+    todo = Todos.get_todo!(id)
+    Todos.delete_todo(todo.id)
     {:noreply, fetch(socket)}
   end
 
@@ -55,4 +70,6 @@ alias TodoList.Todos
   defp fetch(socket) do
     assign(socket, todos: Todos.list_todos())
   end
+
+
 end

@@ -12,18 +12,26 @@
   <h3>TODO'S</h3>
     <%=for todo <- @todos do %>
       <div>
+        <label>
         <%= todo.title %>
         <%= checkbox(:todo, :done, phx_click: "toggle_done", phx_value_id: todo.id, value: todo.done) %>
+
+        <%= submit "Delete", phx_click: "delete", phx_value_id: todo.id, phx_disable_with: "Deleting.." %>
+        <label>
       </div>
+
 <% end %>
-       <footer class="footer">
-        <h3>COMPLETED</h3>
-        <section id="completed-tasks">
-          <input type="checkbox" checked><label>Built Phoenix/Elixir To Do List Application</label>
-          <input type="text"><button class="edit">Edit</button>
-          <button class="delete">Delete</button>
-          </section>
-      </footer>
-    </section>
+
+  <h3>COMPLETED</h3>
+
+   <%=for todo <- @todos do %>
+   <%= todo.title %>
+
+    <%= submit "Delete", phx_click: "delete", phx_value_id: todo.id, phx_disable_with: "Deleting..." %>
+  </form>
+
+
+<% end %>
+
 
 </body>
