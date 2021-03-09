@@ -8,22 +8,24 @@
     <%= live_title_tag assigns[:page_title] || "TodoList", suffix: "ToDo" %>
     <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   </head>
   <body>
     <header>
       <section class="container">
-         <nav class="navigation">
-        <h1>To Do List Application, Designed by Tayvon Lewis </h1>
-
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary">About This App</button>
-          <button type="button" class="btn btn-secondary">My GitHub</button>
+        <h4>To Do List Application, Designed by Tayvon Lewis </h4>
+    <div class="d-grid gap-2" role="group" aria-label="Basic example">
+          <button onclick="location.href='https://github.com/tay2von'" type="button" class="btn btn-secondary">My GitHub
+          </button>
         </div>
-        </nav>
+
+
         <a href="https://github.com/tay2von" class="phx-logo">
           <img src="<%= Routes.static_path(@conn, "/images/todolist.png") %>" alt="To Do List Logo"/>
         </a>
       </section>
+
     </header>
     <%= @inner_content %>
 

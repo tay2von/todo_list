@@ -35,7 +35,6 @@ defmodule TodoListWeb.TodoLive do
 
 
 
-
 use TodoListWeb, :live_view
 alias TodoList.Todos
   def mount(_params, _session, socket) do
