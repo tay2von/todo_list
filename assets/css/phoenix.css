@@ -66,8 +66,8 @@ blockquote *:last-child {
 }
 
 .button[disabled]:focus, .button[disabled]:hover, button[disabled]:focus, button[disabled]:hover, input[type='button'][disabled]:focus, input[type='button'][disabled]:hover, input[type='reset'][disabled]:focus, input[type='reset'][disabled]:hover, input[type='submit'][disabled]:focus, input[type='submit'][disabled]:hover {
-  background-color: #0069d9;
-  border-color: #0069d9
+  background-color: #00c853;
+  border-color: #00c853
 }
 
 .button.button-outline, button.button-outline, input[type='button'].button-outline, input[type='reset'].button-outline, input[type='submit'].button-outline {
@@ -89,7 +89,7 @@ blockquote *:last-child {
 .button.button-clear, button.button-clear, input[type='button'].button-clear, input[type='reset'].button-clear, input[type='submit'].button-clear {
   background-color: transparent;
   border-color: transparent;
-  color: #0069d9
+  color: #00c853
 }
 
 .button.button-clear:focus, .button.button-clear:hover, button.button-clear:focus, button.button-clear:hover, input[type='button'].button-clear:focus, input[type='button'].button-clear:hover, input[type='reset'].button-clear:focus, input[type='reset'].button-clear:hover, input[type='submit'].button-clear:focus, input[type='submit'].button-clear:hover {
@@ -99,9 +99,10 @@ blockquote *:last-child {
 }
 
 .button.button-clear[disabled]:focus, .button.button-clear[disabled]:hover, button.button-clear[disabled]:focus, button.button-clear[disabled]:hover, input[type='button'].button-clear[disabled]:focus, input[type='button'].button-clear[disabled]:hover, input[type='reset'].button-clear[disabled]:focus, input[type='reset'].button-clear[disabled]:hover, input[type='submit'].button-clear[disabled]:focus, input[type='submit'].button-clear[disabled]:hover {
-  color: #0069d9
+  color: #00c853
 }
 
+/*
 code {
   background: #f4f5f6;
   border-radius: .4rem;
@@ -184,6 +185,7 @@ input[type='checkbox'], input[type='radio'] {
   margin-left: .5rem
 }
 
+/*
 .row {
   display: flex;
   flex-direction: column;
@@ -347,6 +349,7 @@ input[type='checkbox'], input[type='radio'] {
   }
 }
 
+
 a {
   color: #0069d9;
   text-decoration: none
@@ -474,6 +477,7 @@ img {
 
 /* General style */
 
+/*
 h1 {
   font-size: 3.6rem;
   line-height: 1.25
@@ -512,6 +516,7 @@ pre {
   padding: 1em;
 }
 
+
 .container {
   margin: 0 auto;
   max-width: 80.0rem;
@@ -519,6 +524,7 @@ pre {
   position: relative;
   width: 100%
 }
+
 
 select {
   width: auto;
@@ -607,25 +613,75 @@ header nav a {
   }
 }
 
-.help-block {
-  color: green;
-  text-transform: capitalize;
-  position: absolute;
-  top: 35px;
+.text-todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
-.form-group {
-  margin-left: auto;
-  margin-right: auto;
+.tasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
-.form-group2 {
-  background-color: green;
-  padding-left: 100px;
-  margin-left: auto;
-  margin-right: auto;
+.completed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
-.todo-header {
-  background-color: green;
+.gitbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 20%;
+  background-color: #00c853;
+}
+
+/* label color */
+
+.input-field label {
+  color: #000;
+}
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+  color: #00c853 green accent-4;
+}
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* valid color */
+
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+  color: #00c853 green accent-4;
 }
