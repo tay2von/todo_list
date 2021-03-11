@@ -685,3 +685,8 @@ header nav a {
 .input-field .prefix.active {
   color: #00c853 green accent-4;
 }
+
+.elixir-phoenix-logo {
+  width: 6%;
+  height: 6%;
+}
