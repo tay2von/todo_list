@@ -66,8 +66,8 @@ blockquote *:last-child {
 }
 
 .button[disabled]:focus, .button[disabled]:hover, button[disabled]:focus, button[disabled]:hover, input[type='button'][disabled]:focus, input[type='button'][disabled]:hover, input[type='reset'][disabled]:focus, input[type='reset'][disabled]:hover, input[type='submit'][disabled]:focus, input[type='submit'][disabled]:hover {
-  background-color: #00c853;
-  border-color: #00c853
+  background-color: #ffffff;
+  border-color: #ffffff
 }
 
 .button.button-outline, button.button-outline, input[type='button'].button-outline, input[type='reset'].button-outline, input[type='submit'].button-outline {
@@ -89,7 +89,7 @@ blockquote *:last-child {
 .button.button-clear, button.button-clear, input[type='button'].button-clear, input[type='reset'].button-clear, input[type='submit'].button-clear {
   background-color: transparent;
   border-color: transparent;
-  color: #00c853
+  color: #ffffff
 }
 
 .button.button-clear:focus, .button.button-clear:hover, button.button-clear:focus, button.button-clear:hover, input[type='button'].button-clear:focus, input[type='button'].button-clear:hover, input[type='reset'].button-clear:focus, input[type='reset'].button-clear:hover, input[type='submit'].button-clear:focus, input[type='submit'].button-clear:hover {
@@ -99,7 +99,7 @@ blockquote *:last-child {
 }
 
 .button.button-clear[disabled]:focus, .button.button-clear[disabled]:hover, button.button-clear[disabled]:focus, button.button-clear[disabled]:hover, input[type='button'].button-clear[disabled]:focus, input[type='button'].button-clear[disabled]:hover, input[type='reset'].button-clear[disabled]:focus, input[type='reset'].button-clear[disabled]:hover, input[type='submit'].button-clear[disabled]:focus, input[type='submit'].button-clear[disabled]:hover {
-  color: #00c853
+  color: #ffffff
 }
 
 /*
@@ -645,6 +645,9 @@ header nav a {
   width: 100%;
   height: 20%;
   background-color: #00c853;
+  border-radius: .6em;
+  box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+  padding: 0.4em 0.0em;
 }
 
 /* label color */
@@ -689,4 +692,48 @@ header nav a {
 .elixir-phoenix-logo {
   width: 6%;
   height: 6%;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: .5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: .25em;
+  box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+  /*box-sizing: border-box; */
+  padding: 10vmin;
+  position: relative;
+  text-align: center;
+  top: 70%;
+  /* transform: translate(-50%, -50%); */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
 }
