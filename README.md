@@ -1,20 +1,8 @@
-# TodoList
+# To Do List
+This is a simple To Do List Application built using Phoenix Live View and Elixir. 
 
-To start your Phoenix server:
+## Getting Started
+To use the app, all you have to do is type in a task that need to be completed. You can add as many tasks as you want. Once your task is complete, just click mark complete. 
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `npm install` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+## Authors
+**Tayvon Lewis** 
