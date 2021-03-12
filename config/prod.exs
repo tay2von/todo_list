@@ -46,7 +46,7 @@ config :logger, level: :info
 # no data is ever sent via http, always redirecting to https:
 #
 #     config :todo_list, TodoListWeb.Endpoint,
-#       force_ssl: [hsts: true]
+       force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
 

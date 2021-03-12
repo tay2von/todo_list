@@ -16,7 +16,8 @@ config :todo_list, TodoListWeb.Endpoint,
   secret_key_base: "doG09qPR9ZL0fEbdYnsf2/sVx3gGIV6aKFX6uVMce0ClD19HClQN1M4bgTVZslkg",
   render_errors: [view: TodoListWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: TodoList.PubSub,
-  live_view: [signing_salt: "JXafcIZ3"]
+  live_view: [signing_salt: "JXafcIZ3"],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]]
 
 # Configures Elixir's Logger
 config :logger, :console,
