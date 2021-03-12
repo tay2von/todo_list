@@ -1,44 +1,31 @@
 <body>
-<div class="bg"></div>
-<div class="bg bg2"></div>
-<div class="bg bg3"></div>
-  <div>
-    <h1>Welcome to a cool To Do List Application! <img src="/images/elixirphoenix1.png" class = "elixir-phoenix-logo" alt="elixir-phoenix"/></h1>
-    <p>Peace of mind knowing this application will never fail. Built with Phoenix/Elixir.</p>
-  </div>
-
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+    <div>
+      <h1>Welcome to a cool To Do List Application! <img src="/images/elixirphoenix1.png" class = "elixir-phoenix-logo" alt="elixir-phoenix"/></h1>
+      <p>Peace of mind knowing this application will never fail. Built with Phoenix/Elixir.</p>
+    </div>
 
     <div class="content">
-  <form action="#" phx-submit="add">
 
-    <%= text_input :todo, :title, placeholder: "What is a task you need to complete?", class: "form-control" %>
-    <div class="input-field">
-    <%= submit "Add Task", class: "btn btn-primary", phx_disable_with: "Adding..." %>
-    </div>
-  </form>
+      <form action="#" phx-submit="add">
+      <%= text_input :todo, :title, placeholder: "What is a task you need to complete?", class: "form-control" %>
+        <div class="input-field">
+        <%= submit "Add Task", class: "btn btn-primary", phx_disable_with: "Adding..." %>
+        </div>
+      </form>
 
-  <h3 class="text-todo">TO DO'S</h3>
-    <%=for todo <- @todos do %>
-      <div class="tasks">
-        <%= todo.title %>
-        <br>
-        <label>
-        <%= checkbox(:todo, :done, phx_click: "toggle_done", phx_value_id: todo.id, value: todo.done) %>
-        <span>Mark Complete</span>
-        </label>
-      </div>
-<% end %>
-    <!--
-  <h3 class="text-todo">COMPLETED</h3>
-   <%=for todo <- @todos do %>
-   <div class="completed">
-   <%= todo.title %>
-    <br>
-    <%= submit "Delete", phx_click: "delete", phx_value_id: todo.id, phx_disable_with: "Deleting..." %>
-  </form>
+      <h3 class="text-todo">TO DO'S</h3>
+      <%=for todo <- @todos do %>
+        <div class="tasks">
+          <%= todo.title %>
+          <br>
+          <label>
+            <%= checkbox(:todo, :done, phx_click: "toggle_done", phx_value_id: todo.id, value: todo.done) %>
+            <span>Mark Complete</span>
+          </label>
+        </div>
+    <% end %>
   </div>
-
-<% end %>
--->
-</div>
 </body>
